@@ -1,6 +1,6 @@
 # <p align="center">EditableImage Flutter Package</p> 
 
-[Flutter](https://flutter.dev/) package for creating a fully customizable and editable image widget. The package written solely in [Dart Language](https://dart.dev/).
+[Flutter](https://flutter.dev/) package for creating a fully customizable and editable image widget. The package has been written solely in [Dart Language](https://dart.dev/).
 
 &nbsp;
 
@@ -12,9 +12,9 @@ For example, almost in every `profile settings` interface, etc., there is a prof
 
 &nbsp;
 
-<p align="center"><img src="screenshot/editable_image_1.png" width="300">&nbsp;<img src="screenshot/editable_image_2.png" width="300">&nbsp;<img src="screenshot/editable_image_3.png" width="300"></p>
+<p align="center"><img src="screenshot/editable_image_1.png" width="300">&nbsp;<img src="screenshot/editable_image_2.png" width="300"></p>
 
-&nbsp;
+<p align="center"><img src="screenshot/editable_image_3.png" width="300"></p>
 
 <p align="center"><img src="screenshot/editable_image_4.png" width="300">&nbsp;<img src="screenshot/editable_image_5.png" width="300"></p>
 
@@ -51,7 +51,7 @@ platform :ios, '9.0'
 
 ### Android Setup
 
-Required permissions: INTERNET, READ_EXTERNAL_STORAGE.
+Required permissions: `INTERNET`, `READ_EXTERNAL_STORAGE`.
 
 If you found some warning logs with Glide appearing, then the main project needs an implementation of `AppGlideModule`. See [Generated API](https://sjudd.github.io/glide/doc/generatedapi.html).
 
@@ -70,31 +70,68 @@ platform :osx, '10.15'
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+Basic usage example: 
 
+`main.dart`
 ```dart
-const like = 'sample';
+// A simple usage of EditableImage.
+// This method gets called when trying to change an image.
+void _directUpdateImage(File? file) async {
+    if (file == null) return;
+
+    _profilePicFile = file;
+    setState(() {});
+}
+
+EditableImage(
+// Define the method that will run on the change process of the image.
+onChange: (file) => _directUpdateImage(file),
+
+// Define the source of the image.
+image: _profilePicFile.existsSync()
+    ? Image.file(_profilePicFile, fit: BoxFit.cover)
+    : null,
+
+// Define the size of EditableImage.
+size: 150.0,
+
+// Define the Theme of image picker.
+imagePickerTheme: ThemeData(
+    // Define the default brightness and colors.
+    primaryColor: Colors.white,
+    shadowColor: Colors.transparent,
+    backgroundColor: Colors.white70,
+    iconTheme: const IconThemeData(color: Colors.black87),
+
+    // Define the default font family.
+    fontFamily: 'Georgia',
+),
+
+// Define the border of the image if needed.
+imageBorder: Border.all(color: Colors.black87, width: 2.0),
+
+// Define the border of the icon if needed.
+editIconBorder: Border.all(color: Colors.black87, width: 2.0),
+),
 ```
 
 &nbsp;
 
 ## Example
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+More examples can be found in `/example` folder on [GitHub](https://github.com/BBarisKilic/Editable-Image). 
 
-```dart
-const like = 'sample';
-```
+[User Profile 1]() - an example of basic implementation of `EditableImage`. Simple project that simulates user profile edit screen.
+
+[User Profile 2]() - an example of implementation of `EditableImage`. Simple project that simulates user profile edit screen.
 
 &nbsp;
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+This package has been written solely in Dart Language yet it has the [wechat_assets_picker](https://github.com/fluttercandies/flutter_wechat_assets_picker) as a dependency. Therefore, `EditableImage` currently supports only `Android`, `iOS`, and `macOS` platforms. In the future, other platform supports may be added.
+
+For more information please visit [GitHub](https://github.com/BBarisKilic/Editable-Image).
 
 &nbsp;
 
