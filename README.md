@@ -1,10 +1,11 @@
-# <p align="center">EditableImage Flutter Package</p> 
+# EditableImage Flutter Package
 
 [Flutter](https://flutter.dev/) package for creating a fully customizable and editable image widget. The package has been written solely in [Dart Language](https://dart.dev/).
 
 &nbsp;
 
-<p align="center"><img src="screenshot/editable_image_6.gif" width="300">&nbsp; &nbsp; <img src="screenshot/editable_image_7.gif" width="300"></p>
+| ![1](https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_6.gif?raw=true)    | ![2](https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_7.gif?raw=true)    
+| -------------------------------------------------------- | -------------------------------------------------------- |
 
 &nbsp;
 
@@ -16,11 +17,10 @@ For example, almost in every `profile settings` interface, etc., there is a prof
 
 &nbsp;
 
-<p align="center"><img src="screenshot/editable_image_1.png" width="300">&nbsp;<img src="screenshot/editable_image_2.png" width="300"></p>
-
-<p align="center"><img src="screenshot/editable_image_3.png" width="300"></p>
-
-<p align="center"><img src="screenshot/editable_image_4.png" width="300">&nbsp;<img src="screenshot/editable_image_5.png" width="300"></p>
+| ![1](https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_1.png?raw=true)    | ![2](https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_2.png?raw=true)    
+| -------------------------------------------------------- | -------------------------------------------------------- |
+| ![3](https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_3.png?raw=true)    | ![4](https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_4.png?raw=true) 
+| ![5](https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_5.png?raw=true)    | 
 
 &nbsp;
 
