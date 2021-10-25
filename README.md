@@ -4,6 +4,10 @@
 
 &nbsp;
 
+<p align="center"><img src="screenshot/editable_image_6.gif" width="300">&nbsp; &nbsp; <img src="screenshot/editable_image_7.gif" width="300"></p>
+
+&nbsp;
+
 ## Features
 
 A powerful and fully customizable widget. It provides a custom widget to save time.
