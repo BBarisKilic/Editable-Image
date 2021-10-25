@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  wechat_assets_picker: 6.2.0
+  wechat_assets_picker: ^6.2.3
 
 dev_dependencies:
   flutter_test:
