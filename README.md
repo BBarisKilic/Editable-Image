@@ -17,10 +17,9 @@ For example, almost in every `profile settings` interface, etc., there is a prof
 
 &nbsp;
 
-| ![1](https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_1.png?raw=true)    | ![2](https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_2.png?raw=true)    
-| -------------------------------------------------------- | -------------------------------------------------------- |
-| ![3](https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_3.png?raw=true)    | ![4](https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_4.png?raw=true) 
-| ![5](https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_5.png?raw=true)    | 
+| ![1](https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_1.png?raw=true) | ![2](https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_2.png?raw=true) | ![3](https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_3.png?raw=true) | 
+| :--------------------------------------------------------: | :--------------------------------------------------------: | :--------------------------------------------------------: |
+| ![4](https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_4.png?raw=true) | ![5](https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_5.png?raw=true) | 
 
 &nbsp;
 
