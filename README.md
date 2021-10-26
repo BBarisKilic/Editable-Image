@@ -39,6 +39,35 @@ import 'package:editable_image/editable_image.dart';
 
 Lastly, make platform-specific setups by applying the following instructions.
 
+### Android Setup
+
+- The minimum required SDK version is `21`. Therefore, please find the following line inside `android/app/build.gradle` and modify it:
+```gradle
+minSdkVersion 21
+```
+
+- Please upgrade the Kotlin version (ext.kotlin_version) to `1.4.32` or the latest version. To  do that, find the following line inside `android/build.gradle` and modify it:
+```gradle
+ext.kotlin_version = '1.4.32'
+```
+
+- Please upgrade the Gradle version (ext.kotlin_version) to `6.8.3` or the latest version but lower than `7.0.0`. To  do that, find the following line inside `android/gradle/wrapper/gradle-wrapper.properties` and modify it:
+```properties
+distributionUrl=https\://services.gradle.org/distributions/gradle-6.8.3-all.zip
+```
+
+- Required permissions: `READ_EXTERNAL_STORAGE`. Please modify `android/app/src/main/AndroidManifest.xml` and update accordingly:
+```xml
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+```
+
+- I recommand you add `android:requestLegacyExternalStorage="true"` to AndroidManifest.xml. Therefore, please modify `android/app/src/main/AndroidManifest.xml` and add the following line inside `application`:
+```xml
+<application android:requestLegacyExternalStorage="true" </application>
+```
+
+If you found some warning logs with Glide appearing, then the main project needs an implementation of `AppGlideModule`. See [Generated API](https://sjudd.github.io/glide/doc/generatedapi.html).
+
 ### iOS Setup
 
 - Platform version must be at least 9.0. Please modify `ios/Podfile` and update accordingly:
@@ -51,12 +80,6 @@ platform :ios, '9.0'
 <key>NSPhotoLibraryUsageDescription</key>
 <string>Put here your permission description.</string>
 ```
-
-### Android Setup
-
-Required permissions: `INTERNET`, `READ_EXTERNAL_STORAGE`.
-
-If you found some warning logs with Glide appearing, then the main project needs an implementation of `AppGlideModule`. See [Generated API](https://sjudd.github.io/glide/doc/generatedapi.html).
 
 ### macOS Setup
 
@@ -124,7 +147,7 @@ editIconBorder: Border.all(color: Colors.black87, width: 2.0),
 
 More examples can be found in `/example` folder on [GitHub](https://github.com/BBarisKilic/Editable-Image). 
 
-[User Profile 1]() - an example of basic implementation of `EditableImage`. Simple project that simulates user profile edit screen.
+[User Profile 1](https://github.com/BBarisKilic/Editable-Image/tree/master/example/user_profile_1) - an example of basic implementation of `EditableImage`. Simple project that simulates user profile edit screen.
 
 [User Profile 2]() - an example of implementation of `EditableImage`. Simple project that simulates user profile edit screen.
 
