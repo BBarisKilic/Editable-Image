@@ -29,7 +29,7 @@ Let's take a look at how to implement `EditableImage` to fastly create user inte
 
 Firstly, add following line to `pubspec.yaml`:
 ```yaml
-editable_image: ^0.1.0
+editable_image: ^0.1.1
 ```
 
 Second, import `EditableImage`:
@@ -149,7 +149,7 @@ More examples can be found in `/example` folder on [GitHub](https://github.com/B
 
 [User Profile 1](https://github.com/BBarisKilic/Editable-Image/tree/master/example/user_profile_1) - an example of basic implementation of `EditableImage`. Simple project that simulates user profile edit screen.
 
-[User Profile 2]() - an example of implementation of `EditableImage`. Simple project that simulates user profile edit screen.
+[User Profile 2](https://github.com/BBarisKilic/Editable-Image/tree/master/example/user_profile_2) - an example of implementation of `EditableImage`. Simple project that simulates user profile edit screen.
 
 &nbsp;
 
