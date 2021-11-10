@@ -9,6 +9,14 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:wechat_assets_picker/wechat_assets_picker.dart';
 
+/// Enum for helping to set edit icon's position.
+enum Position {
+  topLeft,
+  topRight,
+  bottomLeft,
+  bottomRight,
+}
+
 /// A powerful and fully customizable widget.
 /// It provides a custom widget to save time.
 ///
@@ -30,6 +38,7 @@ class EditableImage extends StatelessWidget {
     this.editIconColor,
     this.editIconBackgroundColor,
     this.editIconBorder,
+    this.editIconPosition,
   }) : super(key: key);
 
   /// A Function to access and override the process on
@@ -74,6 +83,9 @@ class EditableImage extends StatelessWidget {
   /// A BoxBorder to add a border to the edit icon.
   final Border? editIconBorder;
 
+  /// A Position to set edit icon's position.
+  final Position? editIconPosition;
+
   /// A method that calls image picker package.
   /// It also calls "onChange" function.
   void _getImage(BuildContext context) async {
@@ -106,7 +118,7 @@ class EditableImage extends StatelessWidget {
               /// For example, profile picture.
               _buildImage(),
               Align(
-                alignment: Alignment.bottomRight,
+                alignment: _getPosition(),
                 child: InkWell(
                   overlayColor: MaterialStateProperty.all(Colors.transparent),
                   highlightColor: Colors.transparent,
@@ -143,6 +155,23 @@ class EditableImage extends StatelessWidget {
             ),
       ),
     );
+  }
+
+  /// Returns the edit icon's position based
+  /// on editIconPosition variable.
+  AlignmentGeometry _getPosition() {
+    switch (editIconPosition) {
+      case Position.topLeft:
+        return Alignment.topLeft;
+      case Position.topRight:
+        return Alignment.topRight;
+      case Position.bottomLeft:
+        return Alignment.bottomLeft;
+      case Position.bottomRight:
+        return Alignment.bottomRight;
+      default:
+        return Alignment.bottomRight;
+    }
   }
 
   /// Builds edit icon.
