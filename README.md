@@ -1,4 +1,4 @@
-# EditableImage Flutter Package
+# Editable Image | Flutter Package
 
 [Flutter](https://flutter.dev/) package for creating a fully customizable and editable image widget. The package has been written solely in [Dart Language](https://dart.dev/).
 
