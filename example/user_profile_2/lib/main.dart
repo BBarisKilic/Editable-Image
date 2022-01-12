@@ -98,6 +98,9 @@ class _HomeViewState extends State<HomeView> {
                 // Define the size of EditableImage.
                 size: 150.0,
 
+                // Define the position of edit icon.
+                editIconPosition: Position.bottomLeft,
+
                 // Define the Theme of image picker.
                 imagePickerTheme: ThemeData(
                   // Define the default brightness and colors.

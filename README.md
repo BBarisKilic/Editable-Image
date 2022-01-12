@@ -29,7 +29,7 @@ Let's take a look at how to implement `EditableImage` to fastly create user inte
 
 Firstly, add following line to `pubspec.yaml`:
 ```yaml
-editable_image: ^0.1.1
+editable_image: ^0.2.0
 ```
 
 Second, import `EditableImage`:
