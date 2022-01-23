@@ -1,6 +1,6 @@
 ## 0.3.0
 
-* Now `editable_image` is fully compatible with `Flutter 2.8.0` and above.
+* Added support to `Flutter Version: 2.8.0` and above.
 * Updated `wechat_assets_picker` version to `6.3.1`
 * Updated `README.md`
 
