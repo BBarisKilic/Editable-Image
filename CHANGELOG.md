@@ -1,3 +1,9 @@
+## 1.0.0
+
+* Updated examples in `/example` folder.
+* Updated `wechat_assets_picker` version to `7.0.5`
+* Updated `README.md`
+
 ## 0.3.0
 
 * Added support to `Flutter Version: 2.8.0` and above.
