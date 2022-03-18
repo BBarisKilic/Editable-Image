@@ -91,10 +91,12 @@ class EditableImage extends StatelessWidget {
   void _getImage(BuildContext context) async {
     final List<AssetEntity>? _assets = await AssetPicker.pickAssets(
       context,
-      maxAssets: 1,
-      requestType: RequestType.image,
-      pickerTheme: imagePickerTheme,
-      textDelegate: EnglishTextDelegate(),
+      pickerConfig: AssetPickerConfig(
+        maxAssets: 1,
+        requestType: RequestType.image,
+        pickerTheme: imagePickerTheme,
+        textDelegate: const AssetPickerTextDelegate(),
+      ),
     );
 
     if (_assets == null) return;
