@@ -1,3 +1,8 @@
+## 1.0.1
+
+* Fixed issues related to version upgrade and updated examples.
+* Updated `README.md`
+
 ## 1.0.0
 
 * Updated examples in `/example` folder.

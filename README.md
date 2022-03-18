@@ -29,7 +29,7 @@ Let's take a look at how to implement `EditableImage` to fastly create user inte
 
 Firstly, add following line to `pubspec.yaml`:
 ```yaml
-editable_image: ^0.3.0
+editable_image: ^1.0.1
 ```
 
 Second, import `EditableImage`:
@@ -46,15 +46,25 @@ Lastly, make platform-specific setups by applying the following instructions.
 minSdkVersion 21
 ```
 
-- Please upgrade the Kotlin version (ext.kotlin_version) to `1.4.32` or the latest version. To  do that, find the following line inside `android/build.gradle` and modify it:
+- Please upgrade the Kotlin version (ext.kotlin_version) to `1.5.21` or the latest version. To  do that, find the following line inside `android/build.gradle` and modify it:
 ```gradle
-ext.kotlin_version = '1.4.32'
+ext.kotlin_version = '1.5.21'
 ```
 
 - Please upgrade the Gradle version (ext.kotlin_version) to `6.8.3` or the latest version but lower than `7.0.0`. To  do that, find the following line inside `android/gradle/wrapper/gradle-wrapper.properties` and modify it:
 ```properties
 distributionUrl=https\://services.gradle.org/distributions/gradle-6.8.3-all.zip
 ```
+
+- Please go to your project folder and add `android:exported="true"` to AndroidManifest.xml file
+```
+<activity
+     android:name=".MainActivity"
+     android:exported="true"
+     android:launchMode="singleTop"
+     android:theme="@style/LaunchTheme"
+ </activity>
+ ```
 
 - Required permissions: `READ_EXTERNAL_STORAGE`. Please modify `android/app/src/main/AndroidManifest.xml` and update accordingly:
 ```xml
