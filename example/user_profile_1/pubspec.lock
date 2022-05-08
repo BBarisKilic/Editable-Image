@@ -67,10 +67,12 @@ packages:
   editable_image:
     dependency: "direct main"
     description:
-      name: editable_image
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.0"
+      path: "."
+      ref: master
+      resolved-ref: "15abf0d66defa0491dd47c91fddcb3165b62ebe3"
+      url: "https://github.com/BBarisKilic/Editable-Image.git"
+    source: git
+    version: "1.0.1"
   extended_image:
     dependency: transitive
     description:
@@ -260,7 +262,7 @@ packages:
       name: photo_manager
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.2"
+    version: "2.0.8"
   platform:
     dependency: transitive
     description:
@@ -391,7 +393,7 @@ packages:
       name: wechat_assets_picker
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "7.0.5"
+    version: "7.1.2"
   win32:
     dependency: transitive
     description:
