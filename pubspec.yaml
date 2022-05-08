@@ -4,7 +4,7 @@
 
 name: editable_image
 description: Flutter package for creating a fully customizable and editable image widget.
-version: 1.0.1
+version: 1.1.0
 homepage: https://github.com/BBarisKilic/Editable-Image
 
 environment:
