@@ -34,6 +34,7 @@ class EditableImage extends StatelessWidget {
     this.imageDefaultColor,
     this.imageDefaultBackgroundColor,
     this.imagePickerTheme,
+    this.imagePickerTextDelegate = const EnglishImagePickerTextDelegate(),
     this.editIcon,
     this.editIconColor,
     this.editIconBackgroundColor,
@@ -68,6 +69,9 @@ class EditableImage extends StatelessWidget {
 
   /// A ThemeData to set the theme of the image picker.
   final ThemeData? imagePickerTheme;
+
+  /// A ThemeData to set the theme of the image picker.
+  final ImagePickerTextDelegate imagePickerTextDelegate;
 
   /// An IconData that will be shown at the bottom as a small
   /// edit icon.
@@ -193,4 +197,13 @@ class EditableImage extends StatelessWidget {
       ),
     );
   }
+}
+
+class ImagePickerTextDelegate extends AssetPickerTextDelegate {
+  const ImagePickerTextDelegate() : super();
+}
+
+class EnglishImagePickerTextDelegate extends ImagePickerTextDelegate
+    implements EnglishAssetPickerTextDelegate {
+  const EnglishImagePickerTextDelegate() : super();
 }
