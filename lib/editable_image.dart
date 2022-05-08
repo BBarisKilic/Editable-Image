@@ -99,7 +99,7 @@ class EditableImage extends StatelessWidget {
         maxAssets: 1,
         requestType: RequestType.image,
         pickerTheme: imagePickerTheme,
-        textDelegate: const AssetPickerTextDelegate(),
+        textDelegate: imagePickerTextDelegate,
       ),
     );
 
