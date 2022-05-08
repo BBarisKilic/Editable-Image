@@ -1,6 +1,6 @@
 // Copyright 2021 The EditableImage Author. All rights reserved.
-// Use of this source code is governed by a MIT-style license that can be
-// found in the LICENSE file.
+// Use of this source code is governed by a Apache 2.0-style license
+// that can be found in the LICENSE file.
 
 import 'dart:io';
 
@@ -34,7 +34,7 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> {
   late Directory _appDocDir;
-  File _profilePicFile = File('');
+  File? _profilePicFile;
 
   @override
   void initState() {
@@ -54,10 +54,11 @@ class _HomeViewState extends State<HomeView> {
   void _saveImageToAppDirectoryForNextUses(File? file) async {
     if (file == null) return;
 
-    if (await _profilePicFile.exists()) {
-      await _profilePicFile.delete(recursive: true);
+    if (_profilePicFile != null) {
+      await _profilePicFile!.delete(recursive: true);
+
       setState(() {
-        _profilePicFile = File('');
+        _profilePicFile = null;
       });
     }
 
@@ -65,7 +66,7 @@ class _HomeViewState extends State<HomeView> {
 
     WidgetsBinding.instance!.addPostFrameCallback((_) async {
       _profilePicFile = File(join(_appDocDir.path, 'profile_picture.png'));
-      await file.copy(_profilePicFile.path);
+      await file.copy(_profilePicFile!.path);
       setState(() {});
     });
   }
@@ -91,8 +92,8 @@ class _HomeViewState extends State<HomeView> {
                 onChange: (file) => _saveImageToAppDirectoryForNextUses(file),
 
                 // Define the source of the image.
-                image: _profilePicFile.existsSync()
-                    ? Image.file(_profilePicFile, fit: BoxFit.cover)
+                image: _profilePicFile != null
+                    ? Image.file(_profilePicFile!, fit: BoxFit.cover)
                     : null,
 
                 // Define the size of EditableImage.

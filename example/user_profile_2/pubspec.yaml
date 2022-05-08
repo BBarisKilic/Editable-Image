@@ -1,3 +1,7 @@
+# Copyright 2021 The EditableImage Author. All rights reserved.
+# Use of this source code is governed by a Apache 2.0-style license
+# that can be found in the LICENSE file.
+
 name: user_profile_2
 description: A new Flutter project.
 
@@ -34,7 +38,10 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  editable_image: ^1.0.0
+  editable_image:
+    git:
+      url: https://github.com/BBarisKilic/Editable-Image.git
+      ref: master
   path_provider: ^2.0.5
   path: ^1.8.0
 

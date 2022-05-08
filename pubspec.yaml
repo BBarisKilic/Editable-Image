@@ -1,3 +1,7 @@
+# Copyright 2021 The EditableImage Author. All rights reserved.
+# Use of this source code is governed by a Apache 2.0-style license
+# that can be found in the LICENSE file.
+
 name: editable_image
 description: Flutter package for creating a fully customizable and editable image widget.
 version: 1.0.1
