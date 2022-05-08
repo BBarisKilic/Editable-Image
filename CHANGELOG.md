@@ -1,8 +1,8 @@
 ## 1.1.0
 
-* Added new parameter `imagePickerTextDelegate`.
-* Set default text delegate to `English`.
-* Set min flutter version to `2.8.0`.
+* Added new parameter `imagePickerTextDelegate`
+* Set default text delegate to `English`
+* Set min flutter version to `2.8.0`
 * Updated examples in `/example` folder.
 * Updated `wechat_assets_picker` version to `7.1.2`
 * Updated `README.md`
