@@ -43,8 +43,9 @@ class _HomeViewState extends State<HomeView> {
   void _directUpdateImage(File? file) async {
     if (file == null) return;
 
-    _profilePicFile = file;
-    setState(() {});
+    setState(() {
+      _profilePicFile = file;
+    });
   }
 
   @override
