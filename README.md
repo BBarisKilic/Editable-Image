@@ -115,8 +115,9 @@ Basic usage example:
 void _directUpdateImage(File? file) async {
     if (file == null) return;
 
-    _profilePicFile = file;
-    setState(() {});
+    setState(() {
+      _profilePicFile = file;
+    });
 }
 
 EditableImage(
@@ -124,8 +125,8 @@ EditableImage(
 onChange: (file) => _directUpdateImage(file),
 
 // Define the source of the image.
-image: _profilePicFile.existsSync()
-    ? Image.file(_profilePicFile, fit: BoxFit.cover)
+image: _profilePicFile != null
+    ? Image.file(_profilePicFile!, fit: BoxFit.cover)
     : null,
 
 // Define the size of EditableImage.
