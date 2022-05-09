@@ -27,7 +27,7 @@ For example, almost in every `profile settings` interface, etc., there is a prof
 
 Let's take a look at how to implement `EditableImage` to fastly create user interfaces for profile picture edit, etc.
 
-Firstly, add following line to `pubspec.yaml`:
+First, add following line to `pubspec.yaml`:
 ```yaml
 editable_image: ^1.1.0
 ```
