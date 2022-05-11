@@ -62,9 +62,9 @@ class _HomeViewState extends State<HomeView> {
       });
     }
 
-    imageCache?.clear();
+    imageCache.clear();
 
-    WidgetsBinding.instance!.addPostFrameCallback((_) async {
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
       _profilePicFile = File(join(_appDocDir.path, 'profile_picture.png'));
       await file.copy(_profilePicFile!.path);
       setState(() {});
