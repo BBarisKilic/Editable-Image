@@ -31,12 +31,7 @@ enum Position {
 /// there is a profile image. Instead of writing from scratch,
 /// this widget can be used  and can save a lot of time.
 class EditableImage extends StatelessWidget {
-  /// [EditableImage] is a powerful and fully customizable widget.
-  /// It provides a custom widget to save time.
-  ///
-  /// For example, almost in every "profile settings" interface,
-  /// there is a profile image. Instead of writing from scratch,
-  /// this widget can be used  and can save a lot of time.
+  /// Create [EditableImage] widget.
   const EditableImage({
     Key? key,
     required this.onChange,
