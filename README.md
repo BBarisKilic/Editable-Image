@@ -17,9 +17,27 @@ For example, almost in every `profile settings` interface, etc., there is a prof
 
 &nbsp;
 
-| ![editable_image_1](https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_1.png?raw=true) | ![editable_image_2](https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_2.png?raw=true) | ![editable_image_3](https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_3.png?raw=true) 
-| :---: | :---: | :---: |
-![editable_image_4](https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_4.png?raw=true) | ![editable_image_5](https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_5.png?raw=true) | ![editable_image_6](https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_6.png?raw=true) | 
+<table>
+<tr>
+<td valign="center"><img src="https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_1.png?raw=true"> 
+</td>
+<td valign="center"><img src="https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_2.png?raw=true"> 
+</td>
+<td valign="center"><img src="https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_3.png?raw=true"> 
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td valign="center"><img src="https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_4.png?raw=true"> 
+</td>
+<td valign="center"><img src="https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_5.png?raw=true"> 
+</td>
+<td valign="center"><img src="https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_6.png?raw=true"> 
+</td>
+</tr>
+</table>
 
 &nbsp;
 
