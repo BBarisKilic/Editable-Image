@@ -26,9 +26,6 @@ For example, almost in every `profile settings` interface, etc., there is a prof
 <td valign="center"><img src="https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_3.png?raw=true"> 
 </td>
 </tr>
-</table>
-
-<table>
 <tr>
 <td valign="center"><img src="https://github.com/BBarisKilic/Editable-Image/blob/master/screenshot/editable_image_4.png?raw=true"> 
 </td>
