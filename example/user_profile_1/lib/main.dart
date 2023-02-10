@@ -12,7 +12,7 @@ void main() {
 }
 
 class UserProfile extends StatelessWidget {
-  const UserProfile({Key? key}) : super(key: key);
+  const UserProfile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +24,10 @@ class UserProfile extends StatelessWidget {
 }
 
 class HomeView extends StatefulWidget {
-  const HomeView({Key? key}) : super(key: key);
+  const HomeView({super.key});
 
   @override
-  _HomeViewState createState() => _HomeViewState();
+  State<HomeView> createState() => _HomeViewState();
 }
 
 class _HomeViewState extends State<HomeView> {
@@ -40,7 +40,7 @@ class _HomeViewState extends State<HomeView> {
 
   // A simple usage of EditableImage.
   // This method gets called when trying to change an image.
-  void _directUpdateImage(File? file) async {
+  Future<void> _directUpdateImage(File? file) async {
     if (file == null) return;
 
     setState(() {
@@ -53,20 +53,21 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const Text(
                 'Profile Settings',
                 style: TextStyle(
-                  fontSize: 28.0,
+                  fontSize: 28,
                 ),
               ),
               const Spacer(flex: 2),
               EditableImage(
-                // Define the method that will run on the change process of the image.
-                onChange: (file) => _directUpdateImage(file),
+                // Define the method that will run on
+                // the change process of the image.
+                onChange: _directUpdateImage,
 
                 // Define the source of the image.
                 image: _profilePicFile != null
@@ -74,14 +75,15 @@ class _HomeViewState extends State<HomeView> {
                     : null,
 
                 // Define the size of EditableImage.
-                size: 150.0,
+                size: 150,
 
                 // Define the Theme of image picker.
                 imagePickerTheme: ThemeData(
                   // Define the default brightness and colors.
                   primaryColor: Colors.white,
                   shadowColor: Colors.transparent,
-                  backgroundColor: Colors.white70,
+                  colorScheme:
+                      const ColorScheme.light(background: Colors.white70),
                   iconTheme: const IconThemeData(color: Colors.black87),
 
                   // Define the default font family.
@@ -89,10 +91,10 @@ class _HomeViewState extends State<HomeView> {
                 ),
 
                 // Define the border of the image if needed.
-                imageBorder: Border.all(color: Colors.black87, width: 2.0),
+                imageBorder: Border.all(color: Colors.black87, width: 2),
 
                 // Define the border of the icon if needed.
-                editIconBorder: Border.all(color: Colors.black87, width: 2.0),
+                editIconBorder: Border.all(color: Colors.black87, width: 2),
               ),
               const Spacer(flex: 2),
               _buildTextField(labelText: 'Username'),
@@ -114,14 +116,14 @@ class _HomeViewState extends State<HomeView> {
   TextField _buildTextField({String labelText = '', bool obscureText = false}) {
     return TextField(
       cursorColor: Colors.black54,
-      cursorWidth: 1.0,
+      cursorWidth: 1,
       obscureText: obscureText,
       obscuringCharacter: '●',
       decoration: InputDecoration(
         labelText: labelText,
         labelStyle: const TextStyle(
           color: Colors.black54,
-          fontSize: 18.0,
+          fontSize: 18,
         ),
         fillColor: Colors.red,
         border: const OutlineInputBorder(
@@ -129,7 +131,7 @@ class _HomeViewState extends State<HomeView> {
             color: Colors.black54,
           ),
           borderRadius: BorderRadius.all(
-            Radius.circular(40.0),
+            Radius.circular(40),
           ),
         ),
         focusedBorder: const OutlineInputBorder(
@@ -138,7 +140,7 @@ class _HomeViewState extends State<HomeView> {
             width: 1.5,
           ),
           borderRadius: BorderRadius.all(
-            Radius.circular(40.0),
+            Radius.circular(40),
           ),
         ),
       ),
@@ -150,7 +152,7 @@ class _HomeViewState extends State<HomeView> {
       onPressed: () => {},
       style: ButtonStyle(
         padding: MaterialStateProperty.all(
-          const EdgeInsets.symmetric(vertical: 20.0),
+          const EdgeInsets.symmetric(vertical: 20),
         ),
         side:
             MaterialStateProperty.all(const BorderSide(color: Colors.black54)),
@@ -160,7 +162,7 @@ class _HomeViewState extends State<HomeView> {
         'Save',
         style: TextStyle(
           color: Colors.black,
-          fontSize: 18.0,
+          fontSize: 18,
         ),
       ),
     );
