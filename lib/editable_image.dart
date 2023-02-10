@@ -2,8 +2,6 @@
 // Use of this source code is governed by a Apache 2.0-style license
 // that can be found in the LICENSE file.
 
-library editable_image;
-
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -24,17 +22,19 @@ enum Position {
   bottomRight,
 }
 
+/// {@template editable_image}
 /// [EditableImage] is a powerful and fully customizable widget.
 /// It provides a custom widget to save time.
 ///
 /// For example, almost in every "profile settings" interface,
 /// there is a profile image. Instead of writing from scratch,
 /// this widget can be used  and can save a lot of time.
+/// {@endtemplate}
 class EditableImage extends StatelessWidget {
-  /// Create [EditableImage] widget.
+  /// {@macro editable_image}
   const EditableImage({
-    Key? key,
     required this.onChange,
+    super.key,
     this.image,
     this.size,
     this.imageBorder,
@@ -48,11 +48,11 @@ class EditableImage extends StatelessWidget {
     this.editIconBackgroundColor,
     this.editIconBorder,
     this.editIconPosition,
-  }) : super(key: key);
+  });
 
   /// [onChange] Function to access and override the process on
   /// change of image.
-  final Function(File? file) onChange;
+  final void Function(File? file) onChange;
 
   /// An [Image] widget that shows the main profile picture, etc.
   final Image? image;
@@ -100,8 +100,8 @@ class EditableImage extends StatelessWidget {
 
   // A method that calls image picker package.
   // It also calls [onChange] function.
-  void _getImage(BuildContext context) async {
-    final List<AssetEntity>? _assets = await AssetPicker.pickAssets(
+  Future<void> _getImage(BuildContext context) async {
+    final assets = await AssetPicker.pickAssets(
       context,
       pickerConfig: AssetPickerConfig(
         maxAssets: 1,
@@ -111,14 +111,13 @@ class EditableImage extends StatelessWidget {
       ),
     );
 
-    if (_assets == null) return;
+    if (assets == null) return;
 
-    onChange(await _assets[0].file);
+    onChange(await assets[0].file);
   }
 
   @override
   Widget build(BuildContext context) => Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(
             // Default size of the EditableImage is 140.0
@@ -151,7 +150,7 @@ class EditableImage extends StatelessWidget {
 
   // Builds main image.
   // For example, profile picture.
-  Container _buildImage() => Container(
+  Widget _buildImage() => DecoratedBox(
         decoration: BoxDecoration(
           color: imageDefaultBackgroundColor ?? Colors.white,
           border: imageBorder ?? const Border(),
@@ -178,13 +177,13 @@ class EditableImage extends StatelessWidget {
         return Alignment.bottomLeft;
       case Position.bottomRight:
         return Alignment.bottomRight;
-      default:
+      case null:
         return Alignment.bottomRight;
     }
   }
 
   // Builds edit icon.
-  Container _buildIcon() => Container(
+  Widget _buildIcon() => Container(
         height: size != null ? (size ?? 140.0) * 0.25 : 35.0,
         width: size != null ? (size ?? 140.0) * 0.25 : 35.0,
         decoration: BoxDecoration(
