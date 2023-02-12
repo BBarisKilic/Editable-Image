@@ -1,12 +1,12 @@
 ## 2.0.0
 
-* feat: update `analysis_options.yaml` (#3)
-* refactor: update `EditableImage` widget (#3)
-* feat: update version constraints (#3)
-* **BREAKING** feat: update `wechat_assets_picker` version to `8.4.0` (#3)
-* feat: update examples (#4)
-* docs: update `README.md` (#6)
-* chore: update `CHANGELOG.md` (#6)
+* feat: update `analysis_options.yaml` ([#2](https://github.com/BBarisKilic/Editable-Image/issues/2))
+* refactor: update `EditableImage` widget ([#2](https://github.com/BBarisKilic/Editable-Image/issues/2))
+* feat: update version constraints ([#2](https://github.com/BBarisKilic/Editable-Image/issues/2))
+* **BREAKING** feat: update `wechat_assets_picker` version to `8.4.0` ([#2](https://github.com/BBarisKilic/Editable-Image/issues/2))
+* feat: update examples ([#4](https://github.com/BBarisKilic/Editable-Image/pull/4))
+* docs: update `README.md` ([#5](https://github.com/BBarisKilic/Editable-Image/issues/5))
+* chore: update `CHANGELOG.md` ([#5](https://github.com/BBarisKilic/Editable-Image/issues/5))
 
 ## 1.1.0
 
