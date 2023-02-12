@@ -44,7 +44,7 @@ Let's take a look at how to implement `EditableImage` to fastly create user inte
 
 First, add following line to `pubspec.yaml`:
 ```yaml
-editable_image: ^1.1.0
+editable_image: ^2.0.0
 ```
 
 Second, import `EditableImage`:
@@ -58,12 +58,16 @@ Lastly, make platform-specific setups by applying the following instructions.
 
 - The minimum required SDK version is `21`. Therefore, please find the following line inside `android/app/build.gradle` and modify it:
 ```gradle
+compileSdkVersion 33
+...
+...
 minSdkVersion 21
+targetSdkVersion 33
 ```
 
-- Please upgrade the Kotlin version (ext.kotlin_version) to `1.5.21` or the latest version. To  do that, find the following line inside `android/build.gradle` and modify it:
+- Please upgrade the Kotlin version (ext.kotlin_version) to `1.7.0` or the latest version. To  do that, find the following line inside `android/build.gradle` and modify it:
 ```gradle
-ext.kotlin_version = '1.5.21'
+ext.kotlin_version = '1.7.0'
 ```
 
 - Please upgrade the Gradle version (ext.kotlin_version) to `6.8.3` or the latest version but lower than `7.0.0`. To  do that, find the following line inside `android/gradle/wrapper/gradle-wrapper.properties` and modify it:
@@ -83,12 +87,12 @@ distributionUrl=https\://services.gradle.org/distributions/gradle-6.8.3-all.zip
 
 - Required permissions: `READ_EXTERNAL_STORAGE`. Please modify `android/app/src/main/AndroidManifest.xml` and update accordingly:
 ```xml
-<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 ```
 
 - I recommand you add `android:requestLegacyExternalStorage="true"` to AndroidManifest.xml. Therefore, please modify `android/app/src/main/AndroidManifest.xml` and add the following line inside `application`:
 ```xml
-<application android:requestLegacyExternalStorage="true" </application>
+<application android:requestLegacyExternalStorage="true"</application>
 ```
 
 If you found some warning logs with Glide appearing, then the main project needs an implementation of `AppGlideModule`. See [Generated API](https://sjudd.github.io/glide/doc/generatedapi.html).
@@ -97,11 +101,16 @@ If you found some warning logs with Glide appearing, then the main project needs
 
 - Platform version must be at least 9.0. Please modify `ios/Podfile` and update accordingly:
 ```ruby
-platform :ios, '9.0'
+platform :ios, '11.0'
 ```
 
 - Add the following lines to `ios/Runner/Info.plist`:
 ```plist
+<key>NSAppTransportSecurity</key>
+<dict>
+	<key>NSAllowsArbitraryLoads</key>
+	<true/>
+</dict>
 <key>NSPhotoLibraryUsageDescription</key>
 <string>Put here your permission description.</string>
 ```
