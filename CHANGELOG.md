@@ -1,40 +1,51 @@
+## 2.0.0
+
+* feat: update `analysis_options.yaml` ([#2](https://github.com/BBarisKilic/Editable-Image/issues/2))
+* refactor: update `EditableImage` widget ([#2](https://github.com/BBarisKilic/Editable-Image/issues/2))
+* feat: update version constraints ([#2](https://github.com/BBarisKilic/Editable-Image/issues/2))
+* **BREAKING** feat: update `wechat_assets_picker` version to `8.4.0` ([#2](https://github.com/BBarisKilic/Editable-Image/issues/2))
+* feat: update examples ([#4](https://github.com/BBarisKilic/Editable-Image/pull/4))
+* docs: update `README.md` ([#5](https://github.com/BBarisKilic/Editable-Image/issues/5))
+* chore: update `CHANGELOG.md` ([#5](https://github.com/BBarisKilic/Editable-Image/issues/5))
+
 ## 1.1.0
 
-* Added new parameter `imagePickerTextDelegate`
-* Set default text delegate to `English`
-* Set min flutter version to `2.8.0`
-* Updated examples in `/example` folder.
-* Updated `wechat_assets_picker` version to `7.1.2`
-* Updated `README.md`
+* feat: add new parameter `imagePickerTextDelegate`
+* feat: set default text delegate to `English`
+* **BREAKING** feat: set min flutter version to `2.8.0`
+* feat: update examples in `/example` folder.
+* **BREAKING** feat: update `wechat_assets_picker` version to `7.1.2`
+* docs: update `README.md`
 
 ## 1.0.1
 
-* Fixed issues related to version upgrade and updated examples.
-* Updated `README.md`
+* fix: solve issues related to version upgrade
++ feat: update examples
+* docs: update `README.md`
 
 ## 1.0.0
 
-* Updated examples in `/example` folder.
-* Updated `wechat_assets_picker` version to `7.0.5`
-* Updated `README.md`
+* feat: update examples in `/example` folder
+* **BREAKING** feat: update `wechat_assets_picker` version to `7.0.5`
+* docs: update `README.md`
 
 ## 0.3.0
 
-* Added support to `Flutter Version: 2.8.0` and above.
-* Updated `wechat_assets_picker` version to `6.3.1`
-* Updated `README.md`
+* feat: add support to `Flutter Version: 2.8.0` and above
+* **BREAKING** feat: update `wechat_assets_picker` version to `6.3.1`
+* docs: update `README.md`
 
 ## 0.2.0
 
-* Added `example.md` to `/example` folder.
-* Added new variable named `editIconPosition`
-* Updated `README.md`
+* docs: add `example.md` to `/example` folder
+* **BREAKING** feat: added new variable named `editIconPosition`
+* docs: update `README.md`
 
 ## 0.1.1
 
-* Added `user_profile_1` and `user_profile_2` to `/example` folder.
-* Updated `README.md`
+* feat: add `user_profile_1` and `user_profile_2` to `/example` folder
+* docs: update `README.md`
 
 ## 0.1.0
 
-* Initial release of `editable_image`
+* feat: initial release of `editable_image` 🎉
