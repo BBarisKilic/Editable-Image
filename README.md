@@ -59,8 +59,9 @@ Lastly, make platform-specific setups by applying the following instructions.
 - The minimum required SDK version is `21`. Therefore, please find the following line inside `android/app/build.gradle` and modify it:
 ```gradle
 compileSdkVersion 33
-...
-...
+..
+..
+..
 minSdkVersion 21
 targetSdkVersion 33
 ```
